@@ -109,6 +109,7 @@ Canduit.prototype.createRequest = function createRequest (route, params, cb) {
 
   var req = request.post(this.api + route, {
     json: true,
+    strictSSL: false,
     form: {
       output: 'json',
       params: JSON.stringify(params)
